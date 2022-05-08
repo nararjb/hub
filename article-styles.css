@@ -1,0 +1,89 @@
+/* BEGINNING OF GLOBAL STYLES */
+/* body has one font, texts are not selectable */
+body {
+    background: #1D1A24;
+    font-family: 'IBM Plex Sans Condensed';
+    margin: 20px 50px 50px 50px;
+    transition: all 0.3s ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* put this wherever the picture shouldn't be draggable or selectable */
+.ns {
+    pointer-events: none;
+}
+
+/* text styles h1, h2, h3, and p */
+h1 {
+    font-size: 34px;
+    color: #F9F6FF;
+}
+
+h2 {
+    font-size: 30px;
+    color: #F9F6FF;
+    font-weight: normal;
+}
+
+h3 {font-size: 24px;
+    color: #F9F6FF;
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+    color: #F9F6FF;
+}
+
+/* lists don't have styles */
+li{
+    list-style: none;
+}
+
+/* links don't have styles and remain white */
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* links will turn to this color when hovered */
+a:hover {
+    color: #CEC6DE;
+}
+
+/* SCROLLBAR STYLES FOR SIDEBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #1A1721;
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #211D28; 
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #332E3F;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}

@@ -1,95 +1,66 @@
+/* BEGINNING OF GLOBAL STYLES */
+/* body has one font, texts are not selectable */
 body {
     background-color: #1A1721;
     font-family: 'IBM Plex Sans Condensed';
-    margin: 0px 50px;
+    margin: 0px 50px 50px 50px;
     transition: all 0.3s ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    
 }
 
+/* put this wherever the picture shouldn't be draggable or selectable */
+.ns {
+    pointer-events: none;
+}
+
+/* text styles h1, h2, h3, and p */
 h1 {
     font-size: 34px;
+    color: #F9F6FF;
 }
 
 h2 {
     font-size: 30px;
+    color: #F9F6FF;
+    font-weight: normal;
 }
 
 h3 {font-size: 24px;
+    color: #F9F6FF;
+    font-weight: normal;
 }
 
 p {
     font-size: 18px;
+    color: #F9F6FF;
 }
 
-.navbar {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    height:100px;
-    width: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    display: flex;
-    margin: 0px -50px;
-    padding: 25px 50px 25px 50px;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 0;
-}
-
-.x .navbar {
-    box-shadow: 0 0 0 #1A1721;
-}
-
+/* lists don't have styles */
 li{
     list-style: none;
 }
 
+/* links don't have styles and remain white */
 a {
     text-decoration: none;
     color: white;
     transition: 0.3s ease;
 }
 
+/* links will turn to this color when hovered */
 a:hover {
     color: #CEC6DE;
 }
 
-.nav-menu {
-    opacity: 0;
-    left: 0;
-    margin-top: 150px;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    background-color: #1A1721;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 150px;
-    transition: all 0.3s ease;
-    height: 100px;
-    width: 100%;
-    padding: 0 50px 0 50px;
-    z-index: -1;
-    visibility: hidden;
-}
 
-.x .nav-menu {
-    position: fixed;
-    opacity: 100;
-    display: flex;
-    left: 0;
-    margin-top: 200px;
-    gap: 150px;
-    transition: all 0.3s ease;
-    flex-direction: row;
-    height: 100px;
-    width: 100%;
-    background-color: #1A1721;
-    box-shadow: 0 5px 8px rgb(0 0 0 / 0.2);
-    justify-content: flex-start;
-    padding: 0 50px 0 50px;
-    z-index: -1;
-    visibility: visible;
-}
-
+/* BEGINNING OF RESPONSIVENESS STYLES */
+/* nav menu for screens with width of less than 1360px */
 @media screen and (max-width: 1360px) {
     .nav-menu {
         gap: 120px;
@@ -99,6 +70,7 @@ a:hover {
     }
 }
 
+/* nav menu for screens with width of less than 1210px */
 @media screen and (max-width: 1210px) {
     .nav-menu {
         gap: 80px;
@@ -108,6 +80,7 @@ a:hover {
     }
 }
 
+/* nav menu for screens with width of less than 1020px */
 @media screen and (max-width: 1020px) {
     .nav-menu {
         gap: 50px;
@@ -117,6 +90,8 @@ a:hover {
     }
 }
 
+/* nav menu for screens with width of less than 870px */
+/* social icons will also disappear from the navbar and will be moved to the menu */
 @media screen and (max-width: 870px) {
     .nav-menu {
         gap: 30px;
@@ -164,6 +139,8 @@ a:hover {
     }
 }
 
+
+/* nav menu for screens with width of less than 800px */
 @media screen and (max-width: 800px) {
     .nav-menu {
         gap: 30px;
@@ -224,12 +201,14 @@ a:hover {
 
 }
 
+/* social column styles for width of less than 800px */
 @media screen and (min-width: 800px) {
     .nav-social-col {
         display: none;
     }
 }
 
+/* social column styles for width of less than 560px */
 @media screen and (max-width: 560px) {
     .x .nav-social-col{
         gap: 20px;
@@ -240,11 +219,11 @@ a:hover {
     }
 }
 
+/* social column styles for width of less than 440px */
 @media screen and (max-width: 440px) {
     .x .nav-social-col {
         gap: 30px;
         margin-left: -30px;
-
     }
 
     .nav-social-col {
@@ -260,6 +239,7 @@ a:hover {
     }
 }
 
+/* social column and nav menu and branding styles for width of less than 374px */
 @media screen and (max-width: 374px) {
     .x .nav-social-col {
         gap: 30px;
@@ -300,6 +280,99 @@ a:hover {
     }
  }
 
+ /* the sidebar section will change in different screen sizes */
+ @media screen and (max-width: 480px) {
+    .list-item {
+        height: 80px;
+        width: 300px;
+
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .list-item {
+        height: 80px;
+        width: 275px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .list-item {
+        height: 80px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .list-item {
+        height: 100px;
+        width: 200px;
+    }
+}
+
+ /* BEGINNING OF NAVIGATION MENU STYLES */
+/* navigation bar on top is fixed and doesn't move */
+.navbar {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: #1A1721;
+    height:100px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    margin: 0px -50px;
+    padding: 25px 50px 25px 50px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+
+/* navbar shadow fades when nav menu expands */
+.x .navbar {
+    box-shadow: 0 0 0 #1A1721;
+}
+
+/* nav menu properties when hidden and collapsed */
+.nav-menu {
+    opacity: 0;
+    left: 0;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: #1A1721;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 150px;
+    transition: all 0.3s ease;
+    height: 100px;
+    width: 100%;
+    padding: 0 50px 0 50px;
+    z-index: -1;
+    visibility: hidden;
+}
+
+/* nav menu properties when menu expands */
+.x .nav-menu {
+    position: fixed;
+    opacity: 100;
+    display: flex;
+    left: 0;
+    margin-top: 200px;
+    gap: 150px;
+    transition: all 0.3s ease;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    background-color: #1A1721;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 0.2);
+    justify-content: flex-start;
+    padding: 0 50px 0 50px;
+    z-index: -1;
+    visibility: visible;
+}
+
+ /* styles for the branding logo in the navbar */
 .nav-branding {
     font-size: 30px;
     padding: 5px 10px 5px 10px;
@@ -317,6 +390,7 @@ a:hover {
     padding: 5px 10px 5px 10px;
 }
 
+/* styles for the navigation menu items like Home, About, etc. */
 .nav-item {
     transition: 0.3s ease;
     font-size: 20px;
@@ -324,7 +398,8 @@ a:hover {
     width: auto;
 }
 
-
+/* the container for the hamburger menu icon */
+/* you don't click on the lines, you click on the container */
 .menu-icon-container {
     height: 50px;
     width: 50px;
@@ -335,6 +410,7 @@ a:hover {
     cursor: pointer;
 }
 
+/* BEGINNING OF STYLES FOR THE ANIMATION OF THE HAMBURGER MENU ICON */
 .menu-icon-left {
     position: absolute;
     background-color: #F9F6FF;
@@ -358,6 +434,7 @@ a:hover {
     top: 18px;
     justify-content: center;
 }
+
 
 .menu-icon-left::after {
     content: "";
@@ -407,6 +484,8 @@ a:hover {
     transform: rotate(0deg) translate(0, 0);
 }
 
+
+/* animations for menu icon */
 .x .menu-icon-left{
     transform: translate(8px,-5px) rotate(45deg);
 }
@@ -423,6 +502,8 @@ a:hover {
     transform: translate(-20px, 5px) rotate(90deg);
 }
 
+/* BEGINNING OF STYLES FOR THE SOCIAL MENU */
+/* styles for the auto layout of social menu */
 .nav-social {
     display: flex;
     flex-direction: row;
@@ -432,6 +513,7 @@ a:hover {
     gap: 30px;
 }
 
+/* social icon styles */
 .social-icon {
     height: 80%;
     width: 80%;
@@ -440,10 +522,14 @@ a:hover {
     cursor: pointer;
 }
 
+/* in the screen sizes smaller than 440px, the social-text width will be zero to fit all the icons on screen */
+/* that is why the size is auto here, but in the responsiveness section, we'll set this to zero */
 .social-text {
     width: auto;
 }
 
+/* styles for the social menu that moves to the navigation menu dropdown */
+/* this is different from the social menu in navbar */
 .nav-social-col {
     flex-direction: row;
     justify-content: flex-end;
@@ -454,26 +540,298 @@ a:hover {
     width:auto;
 }
 
+/* the overlay that falls on the rest of the page when menu expands */
+/* normally, this is not visible */
 .nav-overlay {
     position: fixed;
     left:0;
     top:0;
     width:100vw;
     height:100vh;
-    background: rgba(26, 23, 33, 0.1);
+    background: rgba(26, 23, 33, 0.418);
     visibility: hidden;
     opacity: 0;
     z-index: -2;
     margin-top:200px;
 }
 
+/* the overlay gets visible when dropdown menu expands */
 .x .nav-overlay {
     visibility: visible;
     opacity: 1;
 }
 
+/* BEGINNING OF STYLES FOR THE MAIN PART OF THE BODY */
 main {
     position: absolute;
-    margin-top: 100px;
+    margin-top: 150px;
     z-index:-3;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+}
+
+
+/* BEGINNING OF STYLES FOR SIDEBAR */
+/* the sidebar section */
+.list {
+    position: fixed;
+    overflow-y: auto;
+    height: 80vh;
+    direction: rtl;
+    
+}
+
+/* the scrolling container than includes the sidebar items */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+/* sidebar items */
+.list-item {
+    padding: 20px;
+    background-color: #211D28;
+    border-radius: 5px;
+    height: 90px;
+    width: 340px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* sidebar items will be hoverable */
+.list-item:hover {
+    background-color: #282432;
+}
+
+
+/* SCROLLBAR STYLES FOR SIDEBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #1A1721;
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #211D28; 
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #332E3F;
+}
+
+/* BEGINNING OF STYLES FOR ITEMS INSIDE LIST ITEMS - such as article name, article image, etc. */
+.list-item-heading {
+      direction: ltr;
+      padding: 0px 10px 0px 10px;
+}
+
+/* list item image styles */
+.list-img {
+    height: 40%;
+    width: 40%;
+    align-items: flex-start;
+}
+
+
+/* BEGINNING OF THE PREVIEW FRAME STYLES FOR HOMEPAGE. IMPORTANT: in Home, this is different from other pages! */
+/* This is only the class name for the homepage, because of the PREVIEW functionality */
+/* There's a copy of this below for other pages like blog, portfolio, and my projects */
+/* this is to avoid potential bugs */
+.preview-frame {
+    max-width: 60vw;
+    height: 700px;
+    background: #1D1A24;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+    padding: 40px;
+    position: fixed;
+    margin-left: 430px;
+    margin-right: 50px;
+    overflow-y: auto;
+}
+
+/* the preview section for each sidebar item*/
+.preview-about {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+.preview-portfolio {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+.preview-myprojects {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+.preview-blog {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+.preview-contact {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+/* the preview effect animation for each sidebar item where other items disappear and the one hovered on appears */
+.x.preview-about {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    opacity: 100%;
+    display: block;
+    
+}
+
+.x.preview-portfolio {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    opacity: 100%;
+    display: block;
+}
+
+.x.preview-myprojects {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    opacity: 100%;
+    display: block;
+}
+
+.x.preview-blog {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    opacity: 100%;
+    display: block;
+}
+
+.x.preview-contact {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    opacity: 100%;
+    display: block;
+}
+
+/* the hover background color effects when other items go back to normal color */
+.x.about {
+    background-color: #282432;
+}
+
+.x.portfolio {
+    background-color: #282432;
+}
+
+.x.myprojects {
+    background-color: #282432;
+}
+
+.x.blog {
+    background-color: #282432;
+}
+
+.x.contact {
+    background-color: #282432;
+}
+
+/* BEGINNING OF ARTICLE FRAME STYLES FOR BLOG */
+.preview-article {
+    width: 55vw;
+    height: 700px;
+    background: #1D1A24;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+    padding: 40px;
+    position: fixed;
+    margin-left: 430px;
+    margin-right: 50px;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* same as list-container in homepage */
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+/* same as list-item in homepage */
+.article-item {
+    padding: 20px;
+    background-color: #211D28;
+    border-radius: 5px;
+    height: 90px;
+    width: 340px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.article-item:hover {
+    background-color: #282432;
+}
+
+/* this page doesn't have image */
+.article-heading {
+    direction: ltr;
+    overflow-wrap: break-word;
+    margin: 0 0;
+    font-size: 20px;
+}
+
+.article-detail {
+    margin: 0 0;
+    font-size: 14px;
+    color:#756f85;
+}
+
+/* BEGINNING OF STYLES FOR MINIMAP */
+.minimap {
+    position: fixed;
+
 }
