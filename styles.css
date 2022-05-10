@@ -390,6 +390,26 @@ a:hover {
     padding: 5px 10px 5px 10px;
 }
 
+.navheads {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-branding.breadcrumb1 {
+    margin-left: 0;
+}
+
+.nav-branding.breadcrumb2 {
+    margin-left: 0;
+}
+
+.separator {
+    color: white;
+    font-size: 30px;
+}
 /* styles for the navigation menu items like Home, About, etc. */
 .nav-item {
     transition: 0.3s ease;
@@ -770,7 +790,8 @@ main {
 
 /* BEGINNING OF ARTICLE FRAME STYLES FOR BLOG */
 .preview-article {
-    width: 55vw;
+    max-width: 68vw;
+    width: 1400px;
     height: 700px;
     background: #1D1A24;
     border-radius: 5px;
@@ -828,10 +849,4 @@ iframe {
     margin: 0 0;
     font-size: 14px;
     color:#756f85;
-}
-
-/* BEGINNING OF STYLES FOR MINIMAP */
-.minimap {
-    position: fixed;
-
 }
